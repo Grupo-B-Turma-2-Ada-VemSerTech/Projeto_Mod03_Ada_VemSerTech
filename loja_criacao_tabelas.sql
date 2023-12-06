@@ -16,6 +16,7 @@ CREATE TABLE loja_db.public.fornecedor(
 
 CREATE TABLE loja_db.public.produto(
   produtoid SERIAL PRIMARY KEY,
+  Nome VARCHAR(150),
   fornecedorid SMALLINT,
   categoria VARCHAR (30),
   Preco DECIMAL(10, 2) NOT NULL,
