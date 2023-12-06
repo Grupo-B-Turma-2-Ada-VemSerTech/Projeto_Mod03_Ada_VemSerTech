@@ -38,7 +38,9 @@ Escolha um tipo de negócio do interesse do grupo para desenvolver um sistema de
    - Desenvolva views relevantes para consultas específicas no contexto do sistema do tipo de negócio escolhido. Utilize as operações aprendidas em aulas, como agregações, junções, entre outras.
 
 ## Execução do Projeto:
-    - O Tipo de Negócio escolhido foi uma Loja de Roupas, onde as vendas são realizadas de forma presencial. Com isso elencamos os Produtos, Fornecedores, Clientes, Vendas e Vendedores como colunas principais, cada um com suas respectivas colunas que comforme vemos na imagem.
+
+- O Tipo de Negócio escolhido foi uma Loja de Roupas, onde as vendas são realizadas de forma presencial. Com isso elencamos os Produtos, Fornecedores, Clientes, Vendas e Vendedores como colunas principais, cada um com suas respectivas colunas que comforme vemos na imagem.
     // inserir o modelo depois de pronto//
-    - Tendo criado o tipo do negócio iniciamos a criaçao de uma modelo MER, que no decorrer do projeto migramos para DER, onde pudemos inserir as Entidades e Relacionamentos.
+- Tendo criado o tipo do negócio iniciamos a criaçao de uma modelo MER, que no decorrer do projeto migramos para DER, onde pudemos inserir as Entidades e Relacionamentos.
     
+    continua...
