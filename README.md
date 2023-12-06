@@ -1,15 +1,15 @@
 # Projeto_Mod03_Ada_VemSerTech
 
 Repositório dedicado ao projeto final do módulo 3 - banco de dados - do programa **#vemsertech**.
-
+ 
 **Participantes:** 
-- <span style="color:blue">Adriely</span>
-- <span style="color:blue">Amanda</span>
-- <span style="color:blue">Dainiel</span>
-- <span style="color:blue">Leticia</span>
-- <span style="color:blue">Lorrany</span>
-- <span style="color:blue">Ricardo</span>
-- <span style="color:blue">Thiago</span>
+- **Adriely**
+- **Amanda**
+- **Dainiel**
+- **Leticia**
+- **Lorrany**
+- **Ricardo**
+- **Thiago**
 
 ## Projeto: Desenvolvimento de Sistema de Banco de Dados Personalizado para Diferentes Segmentos de Negócios.
 
@@ -36,3 +36,9 @@ Escolha um tipo de negócio do interesse do grupo para desenvolver um sistema de
 6. **Criação de Views:**
    - Identifique cenários onde a criação de views pode ser benéfica.
    - Desenvolva views relevantes para consultas específicas no contexto do sistema do tipo de negócio escolhido. Utilize as operações aprendidas em aulas, como agregações, junções, entre outras.
+
+## Execução do Projeto:
+    - O Tipo de Negócio escolhido foi uma Loja de Roupas, onde as vendas são realizadas de forma presencial. Com isso elencamos os Produtos, Fornecedores, Clientes, Vendas e Vendedores como colunas principais, cada um com suas respectivas colunas que comforme vemos na imagem.
+    // inserir o modelo depois de pronto//
+    - Tendo criado o tipo do negócio iniciamos a criaçao de uma modelo MER, que no decorrer do projeto migramos para DER, onde pudemos inserir as Entidades e Relacionamentos.
+    
