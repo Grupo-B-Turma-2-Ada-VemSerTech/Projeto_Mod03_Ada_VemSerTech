@@ -1,2 +1,38 @@
 # Projeto_Mod03_Ada_VemSerTech
-Repositório dedicado ao projeto final do módulo 3 - banco de dados - do programa #vemsertech
+
+Repositório dedicado ao projeto final do módulo 3 - banco de dados - do programa **#vemsertech**.
+
+**Participantes:** 
+- <span style="color:blue">Adriely</span>
+- <span style="color:blue">Amanda</span>
+- <span style="color:blue">Dainiel</span>
+- <span style="color:blue">Leticia</span>
+- <span style="color:blue">Lorrany</span>
+- <span style="color:blue">Ricardo</span>
+- <span style="color:blue">Thiago</span>
+
+## Projeto: Desenvolvimento de Sistema de Banco de Dados Personalizado para Diferentes Segmentos de Negócios.
+
+### Descrição:
+Escolha um tipo de negócio do interesse do grupo para desenvolver um sistema de gerenciamento completo, desde a modelagem inicial até a implementação funcional do banco de dados.
+
+### Instruções:
+
+1. **Escolha do Tipo de Negócio:**
+   - Cada grupo deve escolher um tipo de negócio para o qual desenvolverá o sistema de gerenciamento. Pode ser um comércio varejista, restaurante, empresa de serviços, entre outros.
+
+2. **Modelagem Conceitual:**
+   - Elabore um Modelo Entidade Relacionamento (MER) para o sistema do tipo de negócio escolhido. Identifique entidades, relacionamentos, tipos de atributos e cardinalidades. Garanta a integridade de entidade e referencial no modelo conceitual.
+
+3. **Mapeamento para o Modelo Lógico:**
+   - Transforme o MER em um modelo relacional. Defina tabelas, esquemas, tuplas e atributos. Estabeleça chaves primárias e estrangeiras.
+
+4. **Normalização do Banco de Dados:**
+   - Aplique técnicas de normalização para garantir eficiência e integridade. Documente as vantagens e desvantagens do processo de normalização.
+
+5. **Implementação do Banco de Dados:**
+   - Utilize o PostgreSQL para criar o banco de dados conforme o modelo lógico. Insira dados iniciais representativos no banco. Os dados podem ser fictícios ou de alguma fonte disponível na internet.
+
+6. **Criação de Views:**
+   - Identifique cenários onde a criação de views pode ser benéfica.
+   - Desenvolva views relevantes para consultas específicas no contexto do sistema do tipo de negócio escolhido. Utilize as operações aprendidas em aulas, como agregações, junções, entre outras.
