@@ -1,4 +1,4 @@
-INSERT INTO fornecedor (nome, cnpj, telefone, rua, num_predial, bairro, cidade, uf)
+INSERT INTO Fornecedor (Nome, Cnpj, Telefone, Rua, Num_predial, Bairro, Cidade, Uf)
 VALUES	('Malharia ABC', '12345678701234', '(11) 5555-5555', 'Rua das Malhas', 123, 'Centro', 'Belo Horizonte', 'MG'),
         ('Ketal Calças', '23456789012345', '(22) 6666-6666', 'Avenida das Tuataras', 456, 'Igarapés', 'São José dos Campos', 'SP'),
         ('Estapari', '34567890123456', '(33) 7777-7777', 'Rua das Tulipas', 789, 'Bairros das Flores', 'Formosa','GO'),
@@ -10,7 +10,7 @@ VALUES	('Malharia ABC', '12345678701234', '(11) 5555-5555', 'Rua das Malhas', 12
 
 
 
-INSERT INTO produto (nome, fornecedorid, categoria, preco, quantidade)
+INSERT INTO Produto (Nome, Fornecedorid, Categoria, Preco, Quantidade)
 VALUES	('Camiseta básica', 10, 'Roupas', 25.00, 100),
         ('Calça jeans', 12, 'Roupas', 45.00, 80),
         ('Vestido estampado', 13, 'Roupas', 60.00, 65),
@@ -30,13 +30,13 @@ VALUES	('Camiseta básica', 10, 'Roupas', 25.00, 100),
         ('Lenço elegante', 15, 'Acessórios', 30.00, 85);
 
 
-INSERT INTO vendedor (Nome_vendedor)
+INSERT INTO Vendedor (Nome_vendedor)
 VALUES	('Lucas Fernandes'),
         ('Fernanda Oliveira'),
         ('Rafael Santos'),
         ('Isabela Pereira');
 
-INSERT INTO cliente (nome_cliente, cpf, genero, idade, rua, "Nº residencial", bairro, cidade, cep, uf)
+INSERT INTO Cliente (Nome_cliente, Cpf, Genero, Idade, Rua, "Nº residencial", Bairro, Cidade, Cep, Uf)
 VALUES  ('Ana Silva', '12345678901', 'F', 30, 'Rua da Paz', '100', 'Centro', 'São Paulo', '01234567', 'SP'),
         ('Pedro Santos', '23456789012', 'M', 35, 'Avenida das Flores', '200', 'Jardim Botânico', 'Curitiba', '12345678', 'PR'),
         ('Julia Lima', '34567890123', 'F', 25, 'Rua das Árvores', '300', 'Jardim Europa', 'São Paulo', '23456789', 'SP'),
@@ -47,10 +47,10 @@ VALUES  ('Ana Silva', '12345678901', 'F', 30, 'Rua da Paz', '100', 'Centro', 'S�
         ('Fernando Silva', '89012345678', 'M', 32, 'Avenida das Estrelas', '800', 'Centro', 'São Paulo', '78901234', 'SP'),
         ('Mariana Oliveira', '90123456789', 'F', 27, 'Rua da União', '900', 'Centro', 'Rio de Janeiro', '89012345', 'RJ'),
         ('Ricardo Santos', '01234567890', 'M', 31, 'Avenida das Palmeiras', '1000', 'Centro', 'São Paulo', '90123456', 'SP');
-select * from loja_db.public.cliente
+select * from loja_db.public.Cliente
 
 
-INSERT INTO vendas (produtoid,clienteid,valor,tipo_pagamento,cidade_venda,data)
+INSERT INTO Vendas (ProdutoID, ClienteID, Valor,Ttipo_agamento, Cidade_venda, Data)
 VALUES (30, 5, 200.00, 'Cartão de crédito', 'São Paulo', '2023-08-15'),
        (20, 6, 150.00, 'Boleto', 'Curitiba', '2023-08-16'),
        (27, 8, 100.00, 'Dinheiro', 'São Paulo', '2023-08-17'),
