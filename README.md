@@ -1,6 +1,8 @@
 # Projeto_Mod03_Ada_VemSerTech
 
-Repositório dedicado ao projeto final do módulo 3 - banco de dados - do programa **#vemsertech**.
+Repositório dedicado ao projeto final do módulo 3 - banco de dados - do programa **#vemsertech**. 
+Organizado por *Adatech e Ifood*
+Professor da Disciplina: **Matheus Andrade**
  
 **Participantes:** 
 - **Adriely**
@@ -37,7 +39,7 @@ Escolha um tipo de negócio do interesse do grupo para desenvolver um sistema de
    - Identifique cenários onde a criação de views pode ser benéfica.
    - Desenvolva views relevantes para consultas específicas no contexto do sistema do tipo de negócio escolhido. Utilize as operações aprendidas em aulas, como agregações, junções, entre outras.
 
-## Execução do Projeto:
+##  Execução do Projeto:
 
 - O Tipo de Negócio escolhido foi uma Loja de Roupas, onde as vendas são realizadas de forma presencial. Com isso elencamos os Produtos, Fornecedores, Clientes, Vendas e Vendedores como colunas principais, cada um com suas respectivas colunas que comforme vemos na imagem.
     // inserir o modelo depois de pronto//
