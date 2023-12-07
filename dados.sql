@@ -10,24 +10,24 @@ VALUES	('Malharia ABC', '12345678701234', '(11) 5555-5555', 'Rua das Malhas', 12
 
 
 
-INSERT INTO Produto (Nome, Fornecedorid, Categoria, Preco, Quantidade)
-VALUES	('Camiseta básica', 10, 'Roupas', 25.00, 100),
-        ('Calça jeans', 12, 'Roupas', 45.00, 80),
-        ('Vestido estampado', 13, 'Roupas', 60.00, 65),
-        ('Blusa de tricô', 14, 'Roupas', 35.00, 90),
-        ('Jaqueta de couro', 15, 'Roupas', 80.00, 50),
-        ('Calça social', 16, 'Roupas', 55.00, 75),
-        ('Sapato social', 11, 'Calçados', 70.00, 60),
-        ('Tênis esportivo', 12, 'Calçados', 40.00, 85),
-        ('Sandália rasteira', 13, 'Calçados', 30.00, 95),
-        ('Bota de inverno', 14, 'Calçados', 90.00, 40),
-        ('Sapatilha elegante', 15, 'Calçados', 50.00, 70),
-        ('Chinelo confortável', 16, 'Calçados', 20.00, 100),
-        ('Bolsa de couro', 10, 'Acessórios', 60.00, 50),
-        ('Óculos de sol', 12, 'Acessórios', 35.00, 75),
-        ('Cinto de couro', 13, 'Acessórios', 25.00, 90),
-        ('Relógio de luxo', 14, 'Acessórios', 100.00, 30),
-        ('Lenço elegante', 15, 'Acessórios', 30.00, 85);
+INSERT INTO Produto (Nome, Fornecedorid, Categoria, Cor, Tamanho Preco, Quantidade)
+VALUES	('Camiseta básica', 10, 'Roupas', 'Verde', 'P', 25.00, 100),
+        ('Calça jeans', 12, 'Roupas', 'Azul', 'G',45.00, 80),
+        ('Vestido estampado', 13, 'Roupas', 'Branco', 'M',60.00, 65),
+        ('Blusa de tricô', 14, 'Roupas', 'Rosa', 'M',35.00, 90),
+        ('Jaqueta de couro', 15, 'Roupas', 'Verde', 'G', 80.00, 50),
+        ('Calça social', 16, 'Roupas', 'Preto', 'GG', 55.00, 75),
+        ('Sapato social', 11, 'Calçados', 'Preto', '38', 70.00, 60),
+        ('Tênis esportivo', 12, 'Calçados', 'Lilás','40',40.00, 85),
+        ('Sandália rasteira', 13, 'Calçados', 'Amarelo', '36',30.00, 95),
+        ('Bota de inverno', 14, 'Calçados', 'Amarelo', '37',90.00, 40),
+        ('Sapatilha elegante', 15, 'Calçados', 'Lilás', '33', 50.00, 70),
+        ('Chinelo confortável', 16, 'Calçados', 'Azul', '40',20.00, 100),
+        ('Bolsa de couro', 10, 'Acessórios','Preto', 'P', 60.00, 50),
+        ('Óculos de sol', 12, 'Acessórios', 'Rosa', 'P',35.00, 75),
+        ('Cinto de couro', 13, 'Acessórios', 'Prata', 'G',25.00, 90),
+        ('Relógio de luxo', 14, 'Acessórios', 'Prata', 'P',100.00, 30),
+        ('Lenço elegante', 15, 'Acessórios', 'Pink', 'P',30.00, 85);
 
 
 INSERT INTO Vendedor (Nome_vendedor)
