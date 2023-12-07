@@ -34,6 +34,8 @@ CREATE TABLE loja_db.public.Produto(
   Nome VARCHAR(150),
   FornecedorID SMALLINT,
   Categoria VARCHAR (30),
+  Cor VARCHAR (30),
+  Tamanho VARCHAR (5),
   Preco DECIMAL(10, 2) NOT NULL,
   Quantidade SMALLINT,
 
@@ -49,11 +51,20 @@ CREATE TABLE loja_db.public.Vendas(
   Cidade_venda VARCHAR(50) NOT NULL,
   data TIMESTAMP,
   
-  FOREIGN KEY (ProdutoID) REFERENCES Croduto(ProdutoID),
+  FOREIGN KEY (ProdutoID) REFERENCES Produto(ProdutoID),
   FOREIGN KEY (ClienteID) REFERENCES Cliente(ClienteID)
 );
 
 CREATE TABLE Vendedor(
   VendedorID SERIAL PRIMARY KEY,
   Nome_vendedor varchar(30) NOT NULL
+);
+
+CREATE TABLE Produto_Vendido(
+  Produto_vendido_ID SERIAL PRIMARY KEY,
+  Quantidade varchar(30) NOT NULL,
+
+FOREIGN KEY (ProdutoID) REFERENCES Produto(ProdutoID),
+FOREIGN KEY (ClienteID) REFERENCES Venda(VendaID)
+
 );
