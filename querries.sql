@@ -19,3 +19,21 @@ SELECT * FROM vw_produto_total
 SELECT SUM("Preço Total") AS soma_total
 FROM vw_produto_total
 WHERE "ID da Venda" = 18;
+
+
+-- para mostrar o nome do vendendor, nome do cliente, o id da venda e o valor total
+DROP VIEW IF EXISTS vw_vendas_vendedor;
+
+CREATE VIEW vw_vendas_vendedor AS
+SELECT vendedor.nome_vendedor AS "Nome Vendedor",
+	   cliente.nome_cliente AS "Nome Cliente",
+	   vendas.vendaid AS "Venda ID",
+	   vendas.valor_total AS "Total da Compra"
+	   
+	FROM loja_db.public.vendas
+	INNER JOIN loja_db.public.vendedor
+		ON vendas.vendedorid = vendedor.vendedorid
+	INNER JOIN loja_db.public.cliente
+		ON vendas.clienteid = cliente.clienteid;
+SELECT * FROM vw_vendas_vendedor
+order by "Nome Vendedor" 
