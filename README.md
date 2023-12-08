@@ -46,3 +46,9 @@ Escolha um tipo de negócio do interesse do grupo para desenvolver um sistema de
 - Tendo criado o tipo do negócio iniciamos a criaçao de uma modelo MER, que no decorrer do projeto migramos para DER, onde pudemos inserir as Entidades e Relacionamentos.
     
     continua...
+
+    teste de icone 
+    <i class="fa fa-star"></i> :star:
+
+teste de cor
+<font color="red">Este texto está em vermelho.</font>
