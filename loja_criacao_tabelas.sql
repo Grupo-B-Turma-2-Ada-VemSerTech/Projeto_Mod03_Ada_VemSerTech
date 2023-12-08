@@ -62,3 +62,5 @@ CREATE TABLE loja_db.public.Produto_Vendido(
   FOREIGN KEY (VendaID) REFERENCES loja_db.public.Vendas(VendaID),
   FOREIGN KEY (ProdutoID) REFERENCES loja_db.public.Produto(ProdutoID)
 );
+
+SELECT * FROM loja_db.public.vendedor;
