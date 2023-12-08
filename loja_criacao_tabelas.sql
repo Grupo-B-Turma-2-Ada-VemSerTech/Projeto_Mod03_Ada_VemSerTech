@@ -1,20 +1,18 @@
-CREATE DATABASE loja_db;
-
 CREATE TABLE loja_db.public.Cliente(
   ClienteID SERIAL PRIMARY KEY,
   Nome_cliente varchar(40) NOT NULL,
   Cpf char(11) not null,
-  Genero VARCHAR(1) CHECK (Genero IN ('M', 'F')), -- Restrição M ou F
+  Genero VARCHAR(1) CHECK (Genero IN ('M', 'F')),
   Idade SMALLINT,
   Rua VARCHAR(30),
   "Nº residencial" SMALLINT,
   Bairro VARCHAR (20),
-  Bidade VARCHAR (30),
+  Cidade VARCHAR (30),
   Cep INTEGER,
   Uf VARCHAR(2),
-
   constraint unique_cpf_client unique(CPF)
 );
+
 CREATE TABLE loja_db.public.Fornecedor(
   FornecedorID SERIAL PRIMARY KEY,
   Nome VARCHAR (80) NOT NULL,
@@ -25,34 +23,19 @@ CREATE TABLE loja_db.public.Fornecedor(
   Bairro VARCHAR (20),
   Cidade VARCHAR (30),
   Uf VARCHAR(2),
-
   CONSTRAINT unique_cnpj_fornecedor UNIQUE (CNPJ)
 );
 
 CREATE TABLE loja_db.public.Produto(
   ProdutoID SERIAL PRIMARY KEY,
-  Nome VARCHAR(150),
+  Nome_produto VARCHAR(80) NOT NULL,
   FornecedorID SMALLINT,
   Categoria VARCHAR (30),
   Cor VARCHAR (30),
   Tamanho VARCHAR (5),
   Preco DECIMAL(10, 2) NOT NULL,
-  Quantidade SMALLINT,
-
+  Quantidade_estoque SMALLINT,
   FOREIGN KEY (FornecedorID) REFERENCES Fornecedor(FornecedorID)
-);
-
-CREATE TABLE loja_db.public.Vendas(
-  VendaID SERIAL PRIMARY KEY,
-  ProdutoID SMALLINT,
-  ClienteID SMALLINT,
-  VendaID DOUBLE PRECISION NOT NULL,
-  Tipo_Pagamento VARCHAR(30) NOT NULL,
-  Cidade_venda VARCHAR(50) NOT NULL,
-  data TIMESTAMP,
-  
-  FOREIGN KEY (ProdutoID) REFERENCES Produto(ProdutoID),
-  FOREIGN KEY (ClienteID) REFERENCES Cliente(ClienteID)
 );
 
 CREATE TABLE Vendedor(
@@ -60,11 +43,22 @@ CREATE TABLE Vendedor(
   Nome_vendedor varchar(30) NOT NULL
 );
 
-CREATE TABLE Produto_Vendido(
-  Produto_vendido_ID SERIAL PRIMARY KEY,
-  Quantidade varchar(30) NOT NULL,
+CREATE TABLE loja_db.public.Vendas(
+  VendaID SERIAL PRIMARY KEY,
+  VendedorID SMALLINT,
+  ClienteID SMALLINT,
+  Valor_Total DECIMAL(10, 2) NOT NULL, 
+  Tipo_Pagamento VARCHAR(30) NOT NULL,
+  Data TIMESTAMP,
+  FOREIGN KEY (VendedorID) REFERENCES Vendedor(VendedorID),
+  FOREIGN KEY (ClienteID) REFERENCES loja_db.public.Cliente(ClienteID)
+);
 
-FOREIGN KEY (ProdutoID) REFERENCES Produto(ProdutoID),
-FOREIGN KEY (ClienteID) REFERENCES Venda(VendaID)
-
+CREATE TABLE loja_db.public.Produto_Vendido(
+  Produto_Vendido_ID SERIAL PRIMARY KEY,
+  VendaID SMALLINT,
+  ProdutoID SMALLINT,
+  Quantidade INT NOT NULL,
+  FOREIGN KEY (VendaID) REFERENCES loja_db.public.Vendas(VendaID),
+  FOREIGN KEY (ProdutoID) REFERENCES loja_db.public.Produto(ProdutoID)
 );
