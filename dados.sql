@@ -12,7 +12,7 @@ VALUES  ('Ana Silva', '12345678901', 'F', 30, 'Rua da Paz', '100', 'Centro', 'S�
 SELECT * FROM loja_db.public.Cliente;
 
 INSERT INTO Fornecedor (Nome, Cnpj, Telefone, Rua, Num_predial, Bairro, Cidade, Uf)
-VALUES	('Malharia ABC', '12345678701234', '(11) 5555-5555', 'Rua das Malhas', 123, 'Centro', 'Belo Horizonte', 'MG'),
+VALUES	('Malharia ABC', '12345678701234', '(41) 5555-5555', 'Rua das Malhas', 123, 'Centro', 'Belo Horizonte', 'MG'),
         ('Ketal Calças', '23456789012345', '(22) 6666-6666', 'Avenida das Tuataras', 456, 'Igarapés', 'São José dos Campos', 'SP'),
         ('Estapari', '34567890123456', '(33) 7777-7777', 'Rua das Tulipas', 789, 'Bairros das Flores', 'Formosa','GO'),
         ('Loja da Moda', '12345678901234', '(11)1234-5678', 'Rua das Tendências', 123, 'Centro', 'São Paulo', 'SP'),
