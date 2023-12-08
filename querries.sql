@@ -37,3 +37,6 @@ SELECT vendedor.nome_vendedor AS "Nome Vendedor",
 		ON vendas.clienteid = cliente.clienteid;
 SELECT * FROM vw_vendas_vendedor
 order by "Nome Vendedor" 
+
+-- quantidade de itens por categoria
+SELECT categoria, count(*) AS "Quantidade de Itens" FROM produto group by produto.categoria
