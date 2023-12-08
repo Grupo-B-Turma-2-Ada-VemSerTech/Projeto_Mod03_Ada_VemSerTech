@@ -14,3 +14,8 @@ SELECT vendas.vendaid AS "ID da Venda",
 	INNER JOIN loja_db.public.vendas
 		ON vendas.vendaid = produto_vendido.vendaid;
 SELECT * FROM vw_produto_total
+
+-- para calcular o preço de uma determinada venda (exemplo: venda 18)
+SELECT SUM("Preço Total") AS soma_total
+FROM vw_produto_total
+WHERE "ID da Venda" = 18;
