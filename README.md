@@ -3,7 +3,9 @@
 Repositório dedicado ao projeto final do módulo 3 - banco de dados - do programa **#vemsertech**. 
 Organizado por *Adatech e Ifood*
 
-<i class="fa fa-lightbulb"></i> :bulb: Professor da Disciplina: **Matheus Andrade**
+***Professor da Disciplina:***
+- <i class="fa fa-star"></i> :star:
+ **Matheus Andrade**
  
 **Participantes:** 
 - <i class="fa fa-lightbulb"></i> :bulb:
