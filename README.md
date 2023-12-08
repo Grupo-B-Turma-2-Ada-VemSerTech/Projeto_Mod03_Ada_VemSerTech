@@ -3,8 +3,7 @@
 Repositório dedicado ao projeto final do módulo 3 - banco de dados - do programa **#vemsertech**. 
 Organizado por *Adatech e Ifood*
 
-<i class="fa fa-lightbulb"></i> :bulb:
-Professor da Disciplina: **Matheus Andrade**
+<i class="fa fa-lightbulb"></i> :bulb: Professor da Disciplina: **Matheus Andrade**
  
 **Participantes:** 
 - <i class="fa fa-lightbulb"></i> :bulb:
@@ -15,7 +14,7 @@ Professor da Disciplina: **Matheus Andrade**
 **Dainiel**
 - <i class="fa fa-lightbulb"></i> :bulb:
 **Leticia**
--<i class="fa fa-lightbulb"></i> :bulb:
+- <i class="fa fa-lightbulb"></i> :bulb:
  **Lorrany**
 - <i class="fa fa-lightbulb"></i> :bulb:
 **Ricardo**
@@ -58,7 +57,7 @@ Escolha um tipo de negócio do interesse do grupo para desenvolver um sistema de
 
 <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star:
 
-##  Execução do Projeto:
+##                                  Execução do Projeto:
 
 - O Tipo de Negócio escolhido foi uma Loja de Roupas, onde as vendas são realizadas de forma presencial. Com isso elencamos os Produtos, Fornecedores, Clientes, Vendas, Vendedores e Tipo de Produto vendido como *Tabelas*, cada um com suas respectivas *Colunas* que comforme vemos na imagem.
     // inserir o modelo depois de pronto//
