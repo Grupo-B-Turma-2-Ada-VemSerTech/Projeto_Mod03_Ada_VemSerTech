@@ -8,7 +8,7 @@ CREATE TABLE loja_db.public.Cliente(
   "Nº residencial" SMALLINT,
   Bairro VARCHAR (20),
   Cidade VARCHAR (30),
-  Cep INTEGER,
+  Cep VARCHAR (9),
   Uf VARCHAR(2),
   constraint unique_cpf_client unique(CPF)
 );
@@ -63,4 +63,4 @@ CREATE TABLE loja_db.public.Produto_Vendido(
   FOREIGN KEY (ProdutoID) REFERENCES loja_db.public.Produto(ProdutoID)
 );
 
-SELECT * FROM loja_db.public.vendedor;
+-- SELECT * FROM loja_db.public.vendedor;
