@@ -24,6 +24,18 @@ FROM vw_produto_total
 GROUP BY vw_produto_total."ID da Venda"
 ORDER BY vw_produto_total."ID da Venda"
 
+-- View da tabela de venda com o valor total da venda calculada
+CREATE VIEW vw_valor_venda AS
+	SELECT  vendas.vendaid,
+			vendas.vendedorid,
+			vendas.clienteid,
+			vw_venda_total.valor_total,
+			vendas.tipo_pagamento,
+			vendas.data
+	FROM vendas
+		INNER JOIN vw_venda_total
+		ON vendas.vendaid = vw_venda_total.vendaid
+
 
 -- para mostrar o nome do vendendor, nome do cliente, o id da venda e o valor total
 DROP VIEW IF EXISTS vw_vendas_vendedor;
