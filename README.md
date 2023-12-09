@@ -13,7 +13,7 @@ Organizado por *Adatech e Ifood*
 - <i class="fa fa-lightbulb"></i> :bulb:
 **Amanda**
 - <i class="fa fa-lightbulb"></i> :bulb:
-**Dainiel**
+**Daniel**
 - <i class="fa fa-lightbulb"></i> :bulb:
 **Leticia**
 - <i class="fa fa-lightbulb"></i> :bulb:
@@ -61,7 +61,7 @@ Escolha um tipo de negócio do interesse do grupo para desenvolver um sistema de
 
 ##                                  Execução do Projeto:
 
-- O Tipo de Negócio escolhido foi uma Loja de Roupas, onde as vendas são realizadas de forma presencial. Com isso elencamos os Produtos, Fornecedores, Clientes, Vendas, Vendedores e Tipo de Produto vendido como *Tabelas*, cada um com suas respectivas *Colunas* que comforme vemos na imagem.
+- O Tipo de Negócio escolhido foi uma Loja de Roupas, onde as vendas são realizadas de forma presencial. Com isso elencamos os Produtos, Fornecedores, Clientes, Vendas, Vendedores e Tipo de Produto vendido como *Tabelas*, cada um com suas respectivas *Colunas* que conforme vemos na imagem.
     // inserir o modelo depois de pronto//
 - Tendo criado o tipo do negócio iniciamos a criação de uma modelo MER, que no decorrer do projeto migramos para DER, onde pudemos inserir as Entidades e Relacionamentos com seus respectivos formatos
     

@@ -1,3 +1,7 @@
+-- Criação do banco de dados da loja 
+CREATE DATABASE loja_db
+
+-- Criação da tabela com informações dos clientes
 CREATE TABLE loja_db.public.Cliente(
   ClienteID SERIAL PRIMARY KEY,
   Nome_cliente varchar(40) NOT NULL,
@@ -13,6 +17,10 @@ CREATE TABLE loja_db.public.Cliente(
   constraint unique_cpf_client unique(CPF)
 );
 
+-- Querie para vizualizar os dados da tabela cliente
+SELECT * FROM loja_db.public.cliente;
+
+-- Criação da tabela com informações dos fornecedores
 CREATE TABLE loja_db.public.Fornecedor(
   FornecedorID SERIAL PRIMARY KEY,
   Nome VARCHAR (80) NOT NULL,
@@ -26,6 +34,10 @@ CREATE TABLE loja_db.public.Fornecedor(
   CONSTRAINT unique_cnpj_fornecedor UNIQUE (CNPJ)
 );
 
+-- Querie para vizualizar os dados da tabela fornecedor
+SELECT * FROM loja_db.public.fornecedor;
+
+-- Criação da tabela com informações dos produtos
 CREATE TABLE loja_db.public.Produto(
   ProdutoID SERIAL PRIMARY KEY,
   Nome_produto VARCHAR(80) NOT NULL,
@@ -38,11 +50,19 @@ CREATE TABLE loja_db.public.Produto(
   FOREIGN KEY (FornecedorID) REFERENCES Fornecedor(FornecedorID)
 );
 
-CREATE TABLE Vendedor(
+-- Querie para vizualizar os dados da tabela produto
+SELECT * FROM loja_db.public.produto;
+
+-- Criação da tabela com informações dos vendedores
+CREATE TABLE loja_db.public.Vendedor(
   VendedorID SERIAL PRIMARY KEY,
   Nome_vendedor varchar(30) NOT NULL
 );
 
+-- Querie para vizualizar os dados da tabela vendedores
+SELECT * FROM loja_db.public.vendedores;
+
+-- Criação da tabela com informações por vendas
 CREATE TABLE loja_db.public.Vendas(
   VendaID SERIAL PRIMARY KEY,
   VendedorID SMALLINT,
@@ -54,6 +74,10 @@ CREATE TABLE loja_db.public.Vendas(
   FOREIGN KEY (ClienteID) REFERENCES loja_db.public.Cliente(ClienteID)
 );
 
+-- Querie para vizualizar os dados da tabela vendas
+SELECT * FROM loja_db.public.vendas;
+
+-- Criação da tabela com informações de cada produto vendido
 CREATE TABLE loja_db.public.Produto_Vendido(
   Produto_Vendido_ID SERIAL PRIMARY KEY,
   VendaID SMALLINT,
@@ -63,4 +87,5 @@ CREATE TABLE loja_db.public.Produto_Vendido(
   FOREIGN KEY (ProdutoID) REFERENCES loja_db.public.Produto(ProdutoID)
 );
 
--- SELECT * FROM loja_db.public.vendedor;
+-- Querie para vizualizar os dados da tabela Produto_vendido
+SELECT * FROM loja_db.public.Produto_Vendido;
