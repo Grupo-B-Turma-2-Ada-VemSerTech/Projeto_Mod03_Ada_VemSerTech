@@ -15,10 +15,14 @@ SELECT vendas.vendaid AS "ID da Venda",
 		ON vendas.vendaid = produto_vendido.vendaid;
 SELECT * FROM vw_produto_total
 
--- para calcular o preço de uma determinada venda (exemplo: venda 18)
-SELECT SUM("Preço Total") AS soma_total
+-- Cálculo to total por compra
+DROP VIEW IF EXISTS vw_venda_total;
+CREATE VIEW vw_venda_total AS
+SELECT vw_produto_total."ID da Venda" AS vendaid,
+		SUM("Preço Total") AS valor_total
 FROM vw_produto_total
-WHERE "ID da Venda" = 18;
+GROUP BY vw_produto_total."ID da Venda"
+ORDER BY vw_produto_total."ID da Venda"
 
 
 -- para mostrar o nome do vendendor, nome do cliente, o id da venda e o valor total
