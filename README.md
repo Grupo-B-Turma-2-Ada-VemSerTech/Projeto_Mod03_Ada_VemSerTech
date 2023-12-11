@@ -69,3 +69,36 @@ Escolha um tipo de negócio do interesse do grupo para desenvolver um sistema de
   *Modelo DER*
     
    ![Modelo DER](https://github.com/Grupo-B-Turma-2-Ada-VemSerTech/Projeto_Mod03_Ada_VemSerTech/raw/9aa668a07d73c34f0c99beb657153f904daf82b6/Grupo_B-DER.jpg)
+
+- Separamos o Projeto em Files, que estão aqui, inseridos em códigos no VsCode, porém, sugerimos que siga a ordem das descrições na Ferramenta Postgree, afim de criar e executar todos os códigos
+* [loja_criacao_sql]<i class="fas fa-link"></i>(https://github.com/Grupo-B-Turma-2-Ada-VemSerTech/Projeto_Mod03_Ada_VemSerTech/blob/96bc2126d0627e93d4d8944325216f59f83d6d2f/loja_criacao_tabelas.sql) 
+Aqui temos os comandos para criação do Banco de Dados, nomeado como loja_db, e a criação das tabelas:
+Cliente
+Produto
+Vendedor
+Vendas
+Produto_Vendido
+
+- Cada uma dessas tabelas possuem suas respectivas colunas, já com o formato de cada Dado e também o comando FOREIGN KEY onde inserimos as chaves estrangeiras para conexão entre as colunas.
+Nesse mesmo File também colocamos comandos de adição de uma nova coluna com seus respectivos dados, afim de mostrar como funciona os comandos ALTER TABLE, ALTER TABLE, UPDATE e SET.
+
+Após a execução dos comandos dessa Query,  teremos o banco de dados e as respectivas tabelas devidamente criadas;
+
+* [dados.sql]<i class="fas fa-link"></i>(https://github.com/Grupo-B-Turma-2-Ada-VemSerTech/Projeto_Mod03_Ada_VemSerTech/blob/96bc2126d0627e93d4d8944325216f59f83d6d2f/dados.sql) 
+Nesse file, inserimos os dados do nosso Banco, optamos em não usar um arquivo .csv, e fizemos toda a ciração, formatação e edição dos dados.
+No decorrer do projeto, usando apenas o comando SERIAL PRIMARY KEY, verificamos que conforme nossos ids eram criados, seguia-se uma sequência por inserção de dados, e queríamos que o id de cada tabela iniciasse em 1, para melhor organizar o BD, então optamos na inserção dos valores usar o comando: 
+CREATE SEQUENCE inc_cliente
+  start 1
+  increment 1;
+Com isso deixamos nosso Banco de Dados mais eficiente e com um visual mais clean.
+
+Dessa forma, na Query constam todos os dados que populam o Banco de Dados loja_db
+
+
+* [queries.sql]<i class="fas fa-link"></i>(https://github.com/Grupo-B-Turma-2-Ada-VemSerTech/Projeto_Mod03_Ada_VemSerTech/blob/96bc2126d0627e93d4d8944325216f59f83d6d2f/querries.sql)
+Aqui temos a criaçao de algumas VIEWs, usando os comandos CREATE VIEW, JOIN, ORDER BY, dentre outros aprendidos em aula. 
+Primeira View calcula o preço do Produto;
+Segunda View  calcula o total por compra;
+Terceira View calcula o total de venda calculada usando a tabela vendas como base
+Quarta View onde visualizamos o nome do Vendedor, Cliente, Id da Venda e Valor total
+Criamos também um SELECT de quantidade de itens por categoria
