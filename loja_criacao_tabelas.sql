@@ -60,14 +60,13 @@ CREATE TABLE loja_db.public.Vendedor(
 );
 
 -- Querie para vizualizar os dados da tabela vendedores
-SELECT * FROM loja_db.public.vendedores;
+SELECT * FROM loja_db.public.vendedor;
 
 -- Criação da tabela com informações por vendas
 CREATE TABLE loja_db.public.Vendas(
   VendaID SERIAL PRIMARY KEY,
   VendedorID SMALLINT,
-  ClienteID SMALLINT,
-  Valor_Total DECIMAL(10, 2) NOT NULL, 
+  ClienteID SMALLINT, 
   Tipo_Pagamento VARCHAR(30) NOT NULL,
   Data TIMESTAMP,
   FOREIGN KEY (VendedorID) REFERENCES Vendedor(VendedorID),
