@@ -61,10 +61,12 @@ Escolha um tipo de negócio do interesse do grupo para desenvolver um sistema de
 
 ##                                  Execução do Projeto:
 
-- O Tipo de Negócio escolhido foi uma Loja de Roupas, onde as vendas são realizadas de forma presencial. Com isso elencamos os Produtos, Fornecedores, Clientes, Vendas, Vendedores e Tipo de Produto vendido como *Tabelas*, cada um com suas respectivas *Colunas* conforme vemos na imagem.
+- O Tipo de Negócio escolhido foi uma Loja de Roupas, onde as vendas são realizadas de forma presencial. Com isso elencamos os Produtos, Fornecedores, Clientes, Vendas, Vendedores e Tipo de Produto vendido como *Tabelas*, cada um com suas respectivas *Colunas*. Abaixo, é possível ter a visão desse Modelo através do Modelo MER
 
-   ![Modelo DER](https://github.com/Grupo-B-Turma-2-Ada-VemSerTech/Projeto_Mod03_Ada_VemSerTech/raw/9aa668a07d73c34f0c99beb657153f904daf82b6/Grupo_B-DER.jpg)
+- 
 
-- Tendo criado o tipo do negócio iniciamos a criação de uma modelo MER, que no decorrer do projeto migramos para DER, onde pudemos inserir as Entidades e Relacionamentos com seus respectivos formatos
+- Tendo criado o tipo do negócio iniciamos a criação do modelo DER, onde pudemos inserir as Entidades e Relacionamentos com seus respectivos formatos, trabalhando assim con Chaves Primárias e Chaves Estrangeiras, mostrando as conexões entre si.
+
+  *Modelo DER*
     
-
+   ![Modelo DER](https://github.com/Grupo-B-Turma-2-Ada-VemSerTech/Projeto_Mod03_Ada_VemSerTech/raw/9aa668a07d73c34f0c99beb657153f904daf82b6/Grupo_B-DER.jpg)
