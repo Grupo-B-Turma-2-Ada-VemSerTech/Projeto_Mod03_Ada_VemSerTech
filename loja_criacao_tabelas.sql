@@ -7,7 +7,6 @@ CREATE TABLE loja_db.public.Cliente(
   Nome_cliente varchar(40) NOT NULL,
   Cpf char(11) not null,
   Genero VARCHAR(1) CHECK (Genero IN ('M', 'F')),
-  Idade SMALLINT,
   Rua VARCHAR(30),
   "Nº residencial" SMALLINT,
   Bairro VARCHAR (20),
@@ -16,6 +15,18 @@ CREATE TABLE loja_db.public.Cliente(
   Uf VARCHAR(2),
   constraint unique_cpf_client unique(CPF)
 );
+
+-- Adição de nova coluna na tabela cliente para a data de nascimento
+ALTER TABLE loja_db.public.Cliente
+ADD COLUMN data_nascimento DATE;
+
+-- Adição de nova coluna na tabela cliente para a idade
+ALTER TABLE loja_db.public.Cliente
+ADD COLUMN idade SMALLINT
+
+-- Atualização da tabela com a idade calculada a partir da data de nascimento
+UPDATE loja_db.public.Cliente
+SET idade = EXTRACT(YEAR FROM AGE(CURRENT_DATE, data_nascimento));
 
 -- Querie para vizualizar os dados da tabela cliente
 SELECT * FROM loja_db.public.cliente;

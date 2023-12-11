@@ -4,17 +4,58 @@ CREATE SEQUENCE inc_cliente
   increment 1;
 
 -- Inserção de dados na tabela cliente
-INSERT INTO Cliente (ClienteID, Nome_cliente, Cpf, Genero, Idade, Rua, "Nº residencial", Bairro, Cidade, Cep, Uf)
-VALUES  (nextval('inc_cliente'), 'Ana Silva', '12345678901', 'F', 30, 'Rua da Paz', '100', 'Centro', 'São Paulo', '01234567', 'SP'),
-        (nextval('inc_cliente'), 'Pedro Santos', '23456789012', 'M', 35, 'Avenida das Flores', '200', 'Jardim Botânico', 'Curitiba', '12345678', 'PR'),
-        (nextval('inc_cliente'), 'Julia Lima', '34567890123', 'F', 25, 'Rua das Árvores', '300', 'Jardim Europa', 'São Paulo', '23456789', 'SP'),
-        (nextval('inc_cliente'), 'Paulo Oliveira', '45678901234', 'M', 40, 'Avenida Principal', '400', 'Centro', 'Belo Horizonte', '34567890', 'MG'),
-        (nextval('inc_cliente'), 'Larissa Pereira', '56789012345', 'F', 28, 'Rua da Esperança', '500', 'Botafogo', 'Rio de Janeiro', '45678901', 'RJ'),
-        (nextval('inc_cliente'), 'Lucas Almeida', '67890123456', 'M', 33, 'Rua das Amoras', '600', 'Aclimação', 'São Paulo', '56789012', 'SP'),
-        (nextval('inc_cliente'), 'Cristina Souza', '78901234567', 'F', 29, 'Rua das Margaridas', '700', 'Jardim América', 'Goiânia', '67890123', 'GO'),
-        (nextval('inc_cliente'), 'Fernando Silva', '89012345678', 'M', 32, 'Avenida das Estrelas', '800', 'Centro', 'São Paulo', '78901234', 'SP'),
-        (nextval('inc_cliente'), 'Mariana Oliveira', '90123456789', 'F', 27, 'Rua da União', '900', 'Centro', 'Rio de Janeiro', '89012345', 'RJ'),
-        (nextval('inc_cliente'), 'Ricardo Santos', '01234567890', 'M', 31, 'Avenida das Palmeiras', '1000', 'Centro', 'São Paulo', '90123456', 'SP');
+INSERT INTO Cliente (ClienteID, Nome_cliente, Cpf, Genero, Rua, "Nº residencial", Bairro, Cidade, Cep, Uf)
+VALUES  (nextval('inc_cliente'), 'Ana Silva', '12345678901', 'F', 'Rua da Paz', '100', 'Centro', 'São Paulo', '01234567', 'SP'),
+        (nextval('inc_cliente'), 'Pedro Santos', '23456789012', 'M', 'Avenida das Flores', '200', 'Jardim Botânico', 'Curitiba', '12345678', 'PR'),
+        (nextval('inc_cliente'), 'Julia Lima', '34567890123', 'F', 'Rua das Árvores', '300', 'Jardim Europa', 'São Paulo', '23456789', 'SP'),
+        (nextval('inc_cliente'), 'Paulo Oliveira', '45678901234', 'M', 'Avenida Principal', '400', 'Centro', 'Belo Horizonte', '34567890', 'MG'),
+        (nextval('inc_cliente'), 'Larissa Pereira', '56789012345', 'F', 'Rua da Esperança', '500', 'Botafogo', 'Rio de Janeiro', '45678901', 'RJ'),
+        (nextval('inc_cliente'), 'Lucas Almeida', '67890123456', 'M', 'Rua das Amoras', '600', 'Aclimação', 'São Paulo', '56789012', 'SP'),
+        (nextval('inc_cliente'), 'Cristina Souza', '78901234567', 'F', 'Rua das Margaridas', '700', 'Jardim América', 'Goiânia', '67890123', 'GO'),
+        (nextval('inc_cliente'), 'Fernando Silva', '89012345678', 'M', 'Avenida das Estrelas', '800', 'Centro', 'São Paulo', '78901234', 'SP'),
+        (nextval('inc_cliente'), 'Mariana Oliveira', '90123456789', 'F', 'Rua da União', '900', 'Centro', 'Rio de Janeiro', '89012345', 'RJ'),
+        (nextval('inc_cliente'), 'Ricardo Santos', '01234567890', 'M', 'Avenida das Palmeiras', '1000', 'Centro', 'São Paulo', '90123456', 'SP');
+
+-- Atualização de registros com as datas de nascimento
+UPDATE cliente
+SET data_nascimento = '1993-05-05'
+WHERE clienteid = 1;
+
+UPDATE cliente
+SET data_nascimento = '1988-07-19'
+WHERE clienteid = 2;
+
+UPDATE cliente
+SET data_nascimento = '1998-10-03'
+WHERE clienteid = 3;
+
+UPDATE cliente
+SET data_nascimento = '1995-04-14'
+WHERE clienteid = 4;
+
+UPDATE cliente
+SET data_nascimento = '1990-10-18'
+WHERE clienteid = 5;
+
+UPDATE cliente
+SET data_nascimento = '1994-06-25'
+WHERE clienteid = 6;
+
+UPDATE cliente
+SET data_nascimento = '1991-01-28'
+WHERE clienteid = 7;
+
+UPDATE cliente
+SET data_nascimento = '2000-04-01'
+WHERE clienteid = 8;
+
+UPDATE cliente
+SET data_nascimento = '1996-08-02'
+WHERE clienteid = 9;
+
+UPDATE cliente
+SET data_nascimento = '1992-02-15'
+WHERE clienteid = 10;
 
 -- Criação do ID do fornecedor serial iniciando em 1
 CREATE SEQUENCE inc_fornecedor
