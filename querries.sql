@@ -40,3 +40,17 @@ order by "Nome Vendedor"
 
 -- quantidade de itens por categoria
 SELECT categoria, count(*) AS "Quantidade de Itens" FROM produto group by produto.categoria
+
+CREATE VIEW vw_total_vendas_por_vendedor AS
+SELECT
+    v.VendedorID,
+    ve.Nome_vendedor,
+    SUM(v.Valor_Total) AS Total_Vendas
+FROM
+    loja_db.public.Vendas v
+    INNER JOIN loja_db.public.Vendedor ve 
+		ON v.VendedorID = ve.VendedorID
+GROUP BY v.VendedorID, ve.Nome_vendedor;
+
+--- Vendas por vendedor
+SELECT * FROM vw_total_vendas_por_vendedor;
