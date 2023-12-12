@@ -56,3 +56,24 @@ order by "Nome Vendedor"
 
 -- quantidade de itens por categoria
 SELECT categoria, count(*) AS "Quantidade de Itens" FROM produto group by produto.categoria
+
+-- View com o valor gasto por cliente, ordenado do maior para o menor.
+CREATE OR REPLACE VIEW vw_relatorio_cliente AS
+SELECT
+		cliente.clienteid
+		,cliente.genero
+		,cliente.data_nascimento
+		,cliente.cidade
+		,cliente.uf
+		,FLOOR(DATE_PART('year', AGE(CURRENT_DATE, cliente.data_nascimento))) AS idade
+		,COALESCE(SUM(vw_venda_total.valor_total), 0) AS valor_total
+FROM
+    cliente
+LEFT JOIN vendas ON cliente.clienteid = vendas.clienteid
+LEFT JOIN vw_venda_total ON vendas.vendaid = vw_venda_total.vendaid
+GROUP BY
+    cliente.clienteid, cliente.genero, cliente.data_nascimento, cliente.cidade, cliente.uf
+ORDER BY
+    "valor_total" DESC;
+
+SELECT * from vw_relatorio_cliente
