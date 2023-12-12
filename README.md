@@ -103,9 +103,14 @@ Dessa forma, na Query constam todos os dados que populam o Banco de Dados loja_d
 
 * [Link para querries.sql](https://github.com/Grupo-B-Turma-2-Ada-VemSerTech/Projeto_Mod03_Ada_VemSerTech/blob/96bc2126d0627e93d4d8944325216f59f83d6d2f/querries.sql) :link:
 Aqui temos a criaçao de algumas VIEWs, usando os comandos CREATE VIEW, JOIN, ORDER BY, dentre outros aprendidos em aula. 
-Primeira View calcula o preço do Produto;
-Segunda View  calcula o total por compra;
-Terceira View calcula o total de venda calculada usando a tabela vendas como base
-Quarta View onde visualizamos o nome do Vendedor, Cliente, Id da Venda e Valor total
-Criamos também um SELECT de quantidade de itens por categoria
+
+<i class="fa fa-cloud"></i> :cloud:Primeira View: calcula o preço do Produto;
+
+<i class="fa fa-cloud"></i> :cloud:Segunda View:  calcula o total por compra;
+
+<i class="fa fa-cloud"></i> :cloud:Terceira View: calcula o total de venda calculada usando a tabela vendas como base;
+
+<i class="fa fa-cloud"></i> :cloud:Quarta View: onde visualizamos o nome do Vendedor, Cliente, Id da Venda e Valor total
+
+<i class="fa fa-cloud"></i> :cloud:Criamos também um SELECT de quantidade de itens por categoria
 
