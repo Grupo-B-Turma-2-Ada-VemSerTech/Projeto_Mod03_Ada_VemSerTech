@@ -59,3 +59,29 @@ SELECT vendedor.nome_vendedor AS "Nome Vendedor",
 -- quantidade de itens por categoria
 CREATE VIEW vw_item_categoria AS
 SELECT categoria, count(*) AS "Quantidade de Itens" FROM produto group by produto.categoria
+
+
+-- BALANÇO DAS VENDAS
+CREATE VIEW vm_qtd_produtos_vendidos AS
+	SELECT produtoid, sum(quantidade) AS total_vendido from produto_vendido
+		group by produtoid
+		order by produtoid;
+
+CREATE VIEW vw_balanco_produtos_vendidos AS
+	SELECT produto.produtoid,
+		   produto.fornecedorid,
+		   produto.quantidade_estoque AS quantidade_inicial,
+		   vm_qtd_produtos_vendidos.total_vendido,
+		   (produto.quantidade_estoque - vm_qtd_produtos_vendidos.total_vendido) AS quantidade_final
+		   FROM produto
+		   INNER JOIN vm_qtd_produtos_vendidos
+				ON produto.produtoid = vm_qtd_produtos_vendidos.produtoid
+			ORDER BY produto.produtoid
+
+CREATE VIEW vw_produtos_nao_vendidos AS
+	SELECT p.produtoid, p.nome_produto, p.fornecedorid, p.quantidade_estoque
+	FROM Produto p
+	LEFT JOIN vm_qtd_produtos_vendidos v
+		ON p.produtoid = v.produtoid
+	WHERE v.produtoid IS NULL
+	ORDER BY p.produtoid;
