@@ -68,5 +68,5 @@ FROM
 		ON v.VendedorID = ve.VendedorID
 GROUP BY v.VendedorID, ve.Nome_vendedor;
 
---- Vendas por vendedor
+--- vendas por vendedor
 SELECT * FROM vw_total_vendas_por_vendedor;
