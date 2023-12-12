@@ -73,8 +73,9 @@ Escolha um tipo de negócio do interesse do grupo para desenvolver um sistema de
    ![Modelo DER](https://github.com/Grupo-B-Turma-2-Ada-VemSerTech/Projeto_Mod03_Ada_VemSerTech/raw/9aa668a07d73c34f0c99beb657153f904daf82b6/Grupo_B-DER.jpg)
 
 -  <i class="fa fa-check"></i> :heavy_check_mark: Separamos o Projeto em Files, que estão aqui, inseridos em códigos no VsCode, porém, sugerimos que siga a ordem das descrições na Ferramenta Postgree, afim de criar e executar todos os códigos
-* [Link para loja_criacao_tabelas.sql](https://github.com/Grupo-B-Turma-2-Ada-VemSerTech/Projeto_Mod03_Ada_VemSerTech/blob/96bc2126d0627e93d4d8944325216f59f83d6d2f/loja_criacao_tabelas.sql) 
+* [Link para loja_criacao_tabelas.sql](https://github.com/Grupo-B-Turma-2-Ada-VemSerTech/Projeto_Mod03_Ada_VemSerTech/blob/96bc2126d0627e93d4d8944325216f59f83d6d2f/loja_criacao_tabelas.sql) :link:
 Aqui temos os comandos para criação do Banco de Dados, nomeado como loja_db, e a criação das tabelas:
+
 Cliente
 
 Produto
