@@ -63,6 +63,7 @@ Escolha um tipo de negócio do interesse do grupo para desenvolver um sistema de
 
 -  <i class="fa fa-check"></i> :heavy_check_mark: O Tipo de Negócio escolhido foi uma Loja de Roupas, onde as vendas são realizadas de forma presencial. Com isso elencamos os Produtos, Fornecedores, Clientes, Vendas, Vendedores e Tipo de Produto vendido como *Tabelas*, cada um com suas respectivas *Colunas*. Abaixo, é possível ter a visão desse Modelo através do Modelo MER.
 
+  *Modelo MER*
 ![Modelo MER](https://github.com/Grupo-B-Turma-2-Ada-VemSerTech/Projeto_Mod03_Ada_VemSerTech/blob/4d51fd04839754b252e12cb7a527b82b4a3f6ac2/Imagem_MER.jpg)
 
 -  <i class="fa fa-check"></i> :heavy_check_mark: Tendo criado o tipo do negócio iniciamos a criação do modelo DER, onde pudemos inserir as Entidades e Relacionamentos com seus respectivos formatos, trabalhando assim con Chaves Primárias e Chaves Estrangeiras, mostrando as conexões entre si.
@@ -72,15 +73,18 @@ Escolha um tipo de negócio do interesse do grupo para desenvolver um sistema de
    ![Modelo DER](https://github.com/Grupo-B-Turma-2-Ada-VemSerTech/Projeto_Mod03_Ada_VemSerTech/raw/9aa668a07d73c34f0c99beb657153f904daf82b6/Grupo_B-DER.jpg)
 
 -  <i class="fa fa-check"></i> :heavy_check_mark: Separamos o Projeto em Files, que estão aqui, inseridos em códigos no VsCode, porém, sugerimos que siga a ordem das descrições na Ferramenta Postgree, afim de criar e executar todos os códigos
-* [Link para dados.sql](https://github.com/Grupo-B-Turma-2-Ada-VemSerTech/Projeto_Mod03_Ada_VemSerTech/blob/96bc2126d0627e93d4d8944325216f59f83d6d2f/loja_criacao_tabelas.sql) 
+* [Link para loja_criacao_tabelas.sql](https://github.com/Grupo-B-Turma-2-Ada-VemSerTech/Projeto_Mod03_Ada_VemSerTech/blob/96bc2126d0627e93d4d8944325216f59f83d6d2f/loja_criacao_tabelas.sql) 
 Aqui temos os comandos para criação do Banco de Dados, nomeado como loja_db, e a criação das tabelas:
 Cliente
+
 Produto
+
 Vendedor
+
 Vendas
+
 Produto_Vendido
 
--  <i class="fa fa-check"></i> :heavy_check_mark:
 Cada uma dessas tabelas possuem suas respectivas colunas, já com o formato de cada Dado e também o comando FOREIGN KEY onde inserimos as chaves estrangeiras para conexão entre as colunas.
 Nesse mesmo File também colocamos comandos de adição de uma nova coluna com seus respectivos dados, afim de mostrar como funciona os comandos ALTER TABLE, ALTER TABLE, UPDATE e SET.
 
