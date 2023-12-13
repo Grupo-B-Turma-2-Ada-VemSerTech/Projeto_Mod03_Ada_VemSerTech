@@ -13,7 +13,7 @@ SELECT vendas.vendaid AS "ID da Venda",
 		ON produto.produtoid = produto_vendido.produtoid
 	INNER JOIN loja_db.public.vendas
 		ON vendas.vendaid = produto_vendido.vendaid;
-SELECT * FROM vw_produto_total
+--SELECT * FROM vw_produto_total
 
 -- Cálculo to total por compra
 DROP VIEW IF EXISTS vw_venda_total;
@@ -22,7 +22,7 @@ SELECT vw_produto_total."ID da Venda" AS vendaid,
 		SUM("Preço Total") AS valor_total
 FROM vw_produto_total
 GROUP BY vw_produto_total."ID da Venda"
-ORDER BY vw_produto_total."ID da Venda"
+ORDER BY vw_produto_total."ID da Venda";
 
 -- View da tabela de venda com o valor total da venda calculada
 CREATE VIEW vw_valor_venda AS
@@ -34,7 +34,7 @@ CREATE VIEW vw_valor_venda AS
 			vendas.data
 	FROM vendas
 		INNER JOIN vw_venda_total
-		ON vendas.vendaid = vw_venda_total.vendaid
+		ON vendas.vendaid = vw_venda_total.vendaid;
 
 
 -- para mostrar o nome do vendendor, nome do cliente, o id da venda e o valor total
@@ -44,18 +44,47 @@ CREATE VIEW vw_vendas_vendedor AS
 SELECT vendedor.nome_vendedor AS "Nome Vendedor",
 	   cliente.nome_cliente AS "Nome Cliente",
 	   vendas.vendaid AS "Venda ID",
-	   vendas.valor_total AS "Total da Compra"
+	   vw_venda_total.valor_total AS "Total da Compra"
 	   
 	FROM loja_db.public.vendas
+	INNER JOIN vw_venda_total
+		ON vendas.vendaid = vw_venda_total.vendaid
 	INNER JOIN loja_db.public.vendedor
 		ON vendas.vendedorid = vendedor.vendedorid
 	INNER JOIN loja_db.public.cliente
 		ON vendas.clienteid = cliente.clienteid;
-SELECT * FROM vw_vendas_vendedor
-order by "Nome Vendedor" 
+--SELECT * FROM vw_vendas_vendedor
+--order by "Nome Vendedor" 
 
 -- quantidade de itens por categoria
+CREATE VIEW vw_item_categoria AS
 SELECT categoria, count(*) AS "Quantidade de Itens" FROM produto group by produto.categoria
+
+
+-- BALANÇO DAS VENDAS
+CREATE VIEW vm_qtd_produtos_vendidos AS
+	SELECT produtoid, sum(quantidade) AS total_vendido from produto_vendido
+		group by produtoid
+		order by produtoid;
+
+CREATE VIEW vw_balanco_produtos_vendidos AS
+	SELECT produto.produtoid,
+		   produto.fornecedorid,
+		   produto.quantidade_estoque AS quantidade_inicial,
+		   vm_qtd_produtos_vendidos.total_vendido,
+		   (produto.quantidade_estoque - vm_qtd_produtos_vendidos.total_vendido) AS quantidade_final
+		   FROM produto
+		   INNER JOIN vm_qtd_produtos_vendidos
+				ON produto.produtoid = vm_qtd_produtos_vendidos.produtoid
+			ORDER BY produto.produtoid
+
+CREATE VIEW vw_produtos_nao_vendidos AS
+	SELECT p.produtoid, p.nome_produto, p.fornecedorid, p.quantidade_estoque
+	FROM Produto p
+	LEFT JOIN vm_qtd_produtos_vendidos v
+		ON p.produtoid = v.produtoid
+	WHERE v.produtoid IS NULL
+	ORDER BY p.produtoid;
 
 -- View com o valor gasto por cliente, ordenado do maior para o menor.
 CREATE OR REPLACE VIEW vw_relatorio_cliente AS

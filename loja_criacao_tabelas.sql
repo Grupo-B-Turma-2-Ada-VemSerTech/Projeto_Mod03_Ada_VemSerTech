@@ -22,7 +22,7 @@ ADD COLUMN data_nascimento DATE;
 
 -- Adição de nova coluna na tabela cliente para a idade
 ALTER TABLE loja_db.public.Cliente
-ADD COLUMN idade SMALLINT
+ADD COLUMN idade SMALLINT;
 
 -- Atualização da tabela com a idade calculada a partir da data de nascimento
 UPDATE loja_db.public.Cliente
