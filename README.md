@@ -112,5 +112,8 @@ Aqui temos a criaçao de algumas VIEWs, usando os comandos CREATE VIEW, JOIN, OR
 
 <i class="fa fa-cloud"></i> :cloud:Quarta View: onde visualizamos o nome do Vendedor, Cliente, Id da Venda e Valor total
 
+<i class="fa fa-cloud"></i> 
+:cloud:A última view é um relatório de cliente que exibe o valor total gasto por cada cliente, permitindo a visualização dos clientes que mais gastam em ordem decrescente. A agregação do valor total por cliente é realizada utilizando uma coluna que foi criada em outra view. Essa abordagem permite tratar a view como se fosse uma tabela. Além disso, na mesma view, adicionamos uma coluna de idade calculada a partir da data de nascimento presente na tabela do cliente. Optamos por criar uma view não materializada para garantir que a idade seja recalculada sempre que um novo registro for adicionado. Utilizamos o LEFT JOIN para assegurar que todos os clientes sejam incluídos no relatório, mesmo aqueles que não possuem vendas associadas.
+
 <i class="fa fa-cloud"></i> :cloud:Criamos também um SELECT de quantidade de itens por categoria
 
