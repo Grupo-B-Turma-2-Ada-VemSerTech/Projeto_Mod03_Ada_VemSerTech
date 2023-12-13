@@ -13,7 +13,8 @@ SELECT vendas.vendaid AS "ID da Venda",
 		ON produto.produtoid = produto_vendido.produtoid
 	INNER JOIN loja_db.public.vendas
 		ON vendas.vendaid = produto_vendido.vendaid;
---SELECT * FROM vw_produto_total
+
+SELECT * FROM vw_produto_total;
 
 -- Cálculo to total por compra
 DROP VIEW IF EXISTS vw_venda_total;
@@ -23,6 +24,9 @@ SELECT vw_produto_total."ID da Venda" AS vendaid,
 FROM vw_produto_total
 GROUP BY vw_produto_total."ID da Venda"
 ORDER BY vw_produto_total."ID da Venda";
+
+SELECT * FROM vw_venda_total;
+
 
 -- View da tabela de venda com o valor total da venda calculada
 CREATE VIEW vw_valor_venda AS
@@ -36,27 +40,9 @@ CREATE VIEW vw_valor_venda AS
 		INNER JOIN vw_venda_total
 		ON vendas.vendaid = vw_venda_total.vendaid;
 
+SELECT * FROM vw_valor_venda;
 
--- para mostrar o nome do vendendor, nome do cliente, o id da venda e o valor total
-DROP VIEW IF EXISTS vw_vendas_vendedor;
 
-CREATE VIEW vw_vendas_vendedor AS
-SELECT vendedor.nome_vendedor AS "Nome Vendedor",
-	   cliente.nome_cliente AS "Nome Cliente",
-	   vendas.vendaid AS "Venda ID",
-	   vw_venda_total.valor_total AS "Total da Compra"
-	   
-	FROM loja_db.public.vendas
-	INNER JOIN vw_venda_total
-		ON vendas.vendaid = vw_venda_total.vendaid
-	INNER JOIN loja_db.public.vendedor
-		ON vendas.vendedorid = vendedor.vendedorid
-	INNER JOIN loja_db.public.cliente
-		ON vendas.clienteid = cliente.clienteid;
---SELECT * FROM vw_vendas_vendedor
---order by "Nome Vendedor" 
-
---****Jeito que esta funcionando
 -- para mostrar o nome do vendendor, nome do cliente, o id da venda e o valor total
 DROP VIEW IF EXISTS vw_vendas_vendedor;
 
