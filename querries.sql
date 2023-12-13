@@ -82,7 +82,7 @@ CREATE VIEW vw_balanco_produtos_vendidos AS
 		   FROM produto
 		   INNER JOIN vm_qtd_produtos_vendidos
 				ON produto.produtoid = vm_qtd_produtos_vendidos.produtoid
-			ORDER BY produto.produtoid
+			ORDER BY produto.produtoid;
 
 CREATE VIEW vw_produtos_nao_vendidos AS
 	SELECT p.produtoid, p.nome_produto, p.fornecedorid, p.quantidade_estoque
