@@ -54,5 +54,25 @@ SELECT vendedor.nome_vendedor AS "Nome Vendedor",
 SELECT * FROM vw_vendas_vendedor
 order by "Nome Vendedor" 
 
+--****Jeito que esta funcionando
+-- para mostrar o nome do vendendor, nome do cliente, o id da venda e o valor total
+DROP VIEW IF EXISTS vw_vendas_vendedor;
+
+CREATE VIEW vw_vendas_vendedor AS
+SELECT vendedor.nome_vendedor AS "Nome Vendedor",
+       cliente.nome_cliente AS "Nome Cliente",
+       vendas.vendaid AS "Venda ID",
+       vw_venda_total.valor_total AS "Total da Compra"
+FROM loja_db.public.vendas
+INNER JOIN loja_db.public.vendedor
+    ON vendas.vendedorid = vendedor.vendedorid
+INNER JOIN loja_db.public.cliente
+    ON vendas.clienteid = cliente.clienteid
+INNER JOIN vw_venda_total
+    ON vendas.vendaid = vw_venda_total.vendaid;
+
+SELECT * FROM vw_vendas_vendedor ORDER BY "Nome Vendedor";
+
+
 -- quantidade de itens por categoria
 SELECT categoria, count(*) AS "Quantidade de Itens" FROM produto group by produto.categoria
