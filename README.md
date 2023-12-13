@@ -57,20 +57,20 @@ Escolha um tipo de negócio do interesse do grupo para desenvolver um sistema de
    - Identifique cenários onde a criação de views pode ser benéfica.
    - Desenvolva views relevantes para consultas específicas no contexto do sistema do tipo de negócio escolhido. Utilize as operações aprendidas em aulas, como agregações, junções, entre outras.
 
-<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star:
+<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star:
 
 ##                                  Execução do Projeto:
 
 -  <i class="fa fa-check"></i> :heavy_check_mark: O Tipo de Negócio escolhido foi uma Loja de Roupas, onde as vendas são realizadas de forma presencial. Com isso elencamos os Produtos, Fornecedores, Clientes, Vendas, Vendedores e Tipo de Produto vendido como *Tabelas*, cada um com suas respectivas *Colunas*. Abaixo, é possível ter a visão desse Modelo através do Modelo MER.
 
   *Modelo MER*
-![Modelo MER](https://github.com/Grupo-B-Turma-2-Ada-VemSerTech/Projeto_Mod03_Ada_VemSerTech/blob/4d51fd04839754b252e12cb7a527b82b4a3f6ac2/Imagem_MER.jpg)
+       ![Modelo MER](https://github.com/Grupo-B-Turma-2-Ada-VemSerTech/Projeto_Mod03_Ada_VemSerTech/blob/e15f012d2b8ef83834df903243659d3db817f0a1/Grupo_B-MER.jpg)
 
 -  <i class="fa fa-check"></i> :heavy_check_mark: Tendo criado o tipo do negócio iniciamos a criação do modelo DER, onde pudemos inserir as Entidades e Relacionamentos com seus respectivos formatos, trabalhando assim con Chaves Primárias e Chaves Estrangeiras, mostrando as conexões entre si.
 
   *Modelo DER*
     
-   ![Modelo DER](https://github.com/Grupo-B-Turma-2-Ada-VemSerTech/Projeto_Mod03_Ada_VemSerTech/raw/9aa668a07d73c34f0c99beb657153f904daf82b6/Grupo_B-DER.jpg)
+       ![Modelo DER](https://github.com/Grupo-B-Turma-2-Ada-VemSerTech/Projeto_Mod03_Ada_VemSerTech/blob/e15f012d2b8ef83834df903243659d3db817f0a1/Grupo_B-DER%20(1).jpg)
 
 -  <i class="fa fa-check"></i> :heavy_check_mark: Separamos o Projeto em Files, que estão aqui, inseridos em códigos no VsCode, porém, sugerimos que siga a ordem das descrições na Ferramenta Postgree, afim de criar e executar todos os códigos
 * [Link para loja_criacao_tabelas.sql](https://github.com/Grupo-B-Turma-2-Ada-VemSerTech/Projeto_Mod03_Ada_VemSerTech/blob/96bc2126d0627e93d4d8944325216f59f83d6d2f/loja_criacao_tabelas.sql) :link:
@@ -87,7 +87,7 @@ Vendas
 Produto_Vendido
 
 Cada uma dessas tabelas possuem suas respectivas colunas, já com o formato de cada Dado e também o comando FOREIGN KEY onde inserimos as chaves estrangeiras para conexão entre as colunas.
-Nesse mesmo File também colocamos comandos de adição de uma nova coluna com seus respectivos dados, afim de mostrar como funciona os comandos ALTER TABLE, ALTER TABLE, UPDATE e SET.
+Nesse mesmo File também colocamos comandos de adição de uma nova coluna com seus respectivos dados, afim de mostrar como funcionam os comandos: ALTER TABLE, ALTER TABLE, UPDATE e SET.
 
 Após a execução dos comandos dessa Query,  teremos o banco de dados e as respectivas tabelas devidamente criadas;
 
@@ -112,8 +112,23 @@ Aqui temos a criaçao de algumas VIEWs, usando os comandos CREATE VIEW, JOIN, OR
 
 <i class="fa fa-cloud"></i> :cloud:Quarta View: onde visualizamos o nome do Vendedor, Cliente, Id da Venda e Valor total
 
+<i class="fa fa-cloud"></i> :cloud:Quinta,Sexta e Sétima View: compõe a Unidade de Negócio chamda Balanço das Vendas, onde é o possível ter uma visualização importante para tomadas de decisões.
+
 <i class="fa fa-cloud"></i> 
-:cloud:A última view é um relatório de cliente que exibe o valor total gasto por cada cliente, permitindo a visualização dos clientes que mais gastam em ordem decrescente. A agregação do valor total por cliente é realizada utilizando uma coluna que foi criada em outra view. Essa abordagem permite tratar a view como se fosse uma tabela. Além disso, na mesma view, adicionamos uma coluna de idade calculada a partir da data de nascimento presente na tabela do cliente. Optamos por criar uma view não materializada para garantir que a idade seja recalculada sempre que um novo registro for adicionado. Utilizamos o LEFT JOIN para assegurar que todos os clientes sejam incluídos no relatório, mesmo aqueles que não possuem vendas associadas.
+:cloud:A última view, é um relatório de cliente que exibe o valor total gasto por cada cliente. 
+Permitindo a visualização dos clientes que mais gastam em ordem decrescente. 
+A agregação do valor total por cliente é realizada utilizando uma coluna que foi criada em outra view. Essa abordagem permite tratar a view como se fosse uma tabela. Além disso, na mesma view, adicionamos uma coluna de idade calculada a partir da data de nascimento presente na tabela do cliente. 
+Optamos por criar uma view não materializada para garantir que a idade seja recalculada sempre que um novo registro for adicionado. 
+Utilizamos o LEFT JOIN para assegurar que todos os clientes sejam incluídos no relatório, mesmo aqueles que não possuem vendas associadas.
+
 
 <i class="fa fa-cloud"></i> :cloud:Criamos também um SELECT de quantidade de itens por categoria
 
+
+* [Link para querries de Novas Compras.sql](https://github.com/Grupo-B-Turma-2-Ada-VemSerTech/Projeto_Mod03_Ada_VemSerTech/blob/e15f012d2b8ef83834df903243659d3db817f0a1/nova_compra.sql) :link:
+Para fechar o Projeto, foi pensada numa view que pudesse ser capaz de encontrar um cliente por CPF e com isso acessar várias dimensões do Banco de Dados criado, como por exemplo: itens comprados com o seu respectivo id, tipo de pagamento utilizado e o total gasto numa compra por quantidade de produto agregado na venda.
+
+<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star:
+
+Agradecemos a Oportunidade de aprendizadom por meio da @Ada em parceiria com o @Ifood! E também as excelentes instruções feitas pelo Porfessor Matheus Andrade.
+Muito obrigado!
