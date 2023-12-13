@@ -57,7 +57,7 @@ Escolha um tipo de negócio do interesse do grupo para desenvolver um sistema de
    - Identifique cenários onde a criação de views pode ser benéfica.
    - Desenvolva views relevantes para consultas específicas no contexto do sistema do tipo de negócio escolhido. Utilize as operações aprendidas em aulas, como agregações, junções, entre outras.
 
-<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star:
+<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: 
 
 ##                                  Execução do Projeto:
 
@@ -104,18 +104,17 @@ Dessa forma, na Query constam todos os dados que populam o Banco de Dados loja_d
 * [Link para querries.sql](https://github.com/Grupo-B-Turma-2-Ada-VemSerTech/Projeto_Mod03_Ada_VemSerTech/blob/96bc2126d0627e93d4d8944325216f59f83d6d2f/querries.sql) :link:
 Aqui temos a criaçao de algumas VIEWs, usando os comandos CREATE VIEW, JOIN, ORDER BY, dentre outros aprendidos em aula. 
 
-<i class="fa fa-cloud"></i> :cloud:Primeira View: calcula o preço do Produto;
+<i class="fa fa-cloud"></i> :cloud: Primeira View: calcula o preço do Produto;
 
-<i class="fa fa-cloud"></i> :cloud:Segunda View:  calcula o total por compra;
+<i class="fa fa-cloud"></i> :cloud: Segunda View:  calcula o total por compra;
 
-<i class="fa fa-cloud"></i> :cloud:Terceira View: calcula o total de venda calculada usando a tabela vendas como base;
+<i class="fa fa-cloud"></i> :cloud: Terceira View: calcula o total de venda calculada usando a tabela vendas como base;
 
-<i class="fa fa-cloud"></i> :cloud:Quarta View: onde visualizamos o nome do Vendedor, Cliente, Id da Venda e Valor total
+<i class="fa fa-cloud"></i> :cloud: Quarta View: onde visualizamos o nome do Vendedor, Cliente, Id da Venda e Valor total
 
-<i class="fa fa-cloud"></i> :cloud:Quinta,Sexta e Sétima View: compõe a Unidade de Negócio chamda Balanço das Vendas, onde é o possível ter uma visualização importante para tomadas de decisões.
+<i class="fa fa-cloud"></i> :cloud: Quinta,Sexta e Sétima View: compõe a Unidade de Negócio chamda Balanço das Vendas, onde é o possível ter uma visualização importante para tomadas de decisões.
 
-<i class="fa fa-cloud"></i> 
-:cloud:A última view, é um relatório de cliente que exibe o valor total gasto por cada cliente. 
+<i class="fa fa-cloud"></i> :cloud: A última view, é um relatório de cliente que exibe o valor total gasto por cada cliente. 
 Permitindo a visualização dos clientes que mais gastam em ordem decrescente. 
 A agregação do valor total por cliente é realizada utilizando uma coluna que foi criada em outra view. Essa abordagem permite tratar a view como se fosse uma tabela. Além disso, na mesma view, adicionamos uma coluna de idade calculada a partir da data de nascimento presente na tabela do cliente. 
 Optamos por criar uma view não materializada para garantir que a idade seja recalculada sempre que um novo registro for adicionado. 
@@ -125,10 +124,13 @@ Utilizamos o LEFT JOIN para assegurar que todos os clientes sejam incluídos no 
 <i class="fa fa-cloud"></i> :cloud:Criamos também um SELECT de quantidade de itens por categoria
 
 
+
+
 * [Link para querries de Novas Compras.sql](https://github.com/Grupo-B-Turma-2-Ada-VemSerTech/Projeto_Mod03_Ada_VemSerTech/blob/e15f012d2b8ef83834df903243659d3db817f0a1/nova_compra.sql) :link:
 Para fechar o Projeto, foi pensada numa view que pudesse ser capaz de encontrar um cliente por CPF e com isso acessar várias dimensões do Banco de Dados criado, como por exemplo: itens comprados com o seu respectivo id, tipo de pagamento utilizado e o total gasto numa compra por quantidade de produto agregado na venda.
 
-<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star:
+<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star:<i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: <i class="fa fa-star"></i> :star: 
 
-Agradecemos a Oportunidade de aprendizadom por meio da @Ada em parceiria com o @Ifood! E também as excelentes instruções feitas pelo Porfessor Matheus Andrade.
+Agradecemos a Oportunidade de aprendizadom por meio da *@Adatech* em parceiria com o *@Ifood*! 
+E também as excelentes instruções feitas pelo Porfessor Matheus Andrade.
 Muito obrigado!
